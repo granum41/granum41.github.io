@@ -1,3 +1,11 @@
+/* 
+    Campfire colors:
+        #FEC09A - light orange
+        #222034 - purple background
+        #3C2F44 - light purple background
+        #C65368 - pink flame
+ */
+
 body {
     font-family: Arial, sans-serif;
     color: #FEC09A; 
@@ -15,6 +23,17 @@ body {
     padding-bottom: 200px; /* Reserve space for the campfire at the bottom */
 }
 
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+a {
+  color: #C65368;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 section {
     padding: 20px;
     text-align: center; /* Center text within sections */
@@ -29,4 +48,11 @@ section {
     transform: translateX(-50%);
     z-index: -1;
 
+}
+
+button {
+    background-color: #222034;
+    color: #FEC09A;
+    border-radius: 10px;
+    box-shadow: grey;
 }

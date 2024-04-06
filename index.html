@@ -14,24 +14,27 @@
             <p>an outdoorsy software engineer living in beautiful & free north idaho</p>
         </section>
         <section id="links">
-            <h2>links</h2>
-            <p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/avery-granum/">linkedin</a></li>
-                    <li><a href="http://www.averyslist.com/">averyslist</a></li>
-                </ul>
-            </p>
+            <p><a href="https://www.linkedin.com/in/avery-granum/">linkedin</a></p>
+            <p><a href="http://www.averyslist.com/">averyslist</a></p>
+            <p><a href="mailto:granum41@gmail.com">granum41@gmail.com</a></p>
         </section>
-        <section id="contact">
-            <h2>contact</h2>
-            <p>
-                <ul>
-                    <li><a href="mailto:granum41@gmail.com">granum41@gmail.com</li>
-
-                </ul>
-            </p>
+        <section id="munny">
+            <h2>$</h2>
+            <p>BTC: <label id="btcText">bc1qj3zgdydlkvpnw6dn3ldjsyczpknsyaa7pszn6h</label> <button onclick="copyText('btcText')">Copy</button></p>  
+            <p>XMR: <label id="xmrText">44hBeyMsW5zTQKjRmXkU63WsKGDRdRtatiY2qb9Rn4e59k5zF1CJ5QUAsZQdZ55enfTkyHxCDW6ZcFhWK1gwXLLsD4hxEUx</label> <button onclick="copyText('xmrText')">Copy</button></p>  
+            <p>ETH: <label id="ethText">0x14727d7992E510F4FD6437B7f34f768db9F7221A</label> <button onclick="copyText('ethText')">Copy</button></p>  
         </section>
     </div>
     <img src="campfire.gif" alt="Campfire" class="campfire" />
+
+
+<script>
+        function copyText(labelId) {
+            /* Select text area by id*/
+            var label = document.getElementById(labelId);
+            var textToCopy = label.textContent || label.innerText;
+            navigator.clipboard.writeText(textToCopy);
+        }
+</script>
 </body>
 </html>
