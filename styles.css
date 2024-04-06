@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #FEC09A; 
+    margin: 0;
+    padding: 0;
+    background-color: #222034; /* Dark background color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjusted to account for the space occupied by the campfire */
+    padding-bottom: 200px; /* Reserve space for the campfire at the bottom */
+}
+
+section {
+    padding: 20px;
+    text-align: center; /* Center text within sections */
+    margin-bottom: 20px; /* Add space between sections */
+}
+
+/* Campfire styling */
+.campfire {
+    position: absolute;
+    bottom: 20px; /* Add space between the campfire and the sections */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+}
