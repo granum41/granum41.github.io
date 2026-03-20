@@ -18,12 +18,14 @@
                 <a
                     class="calendar-button"
                     href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vote%20Avery%20Granum%20for%20Precinct%20Committeeman%20417&dates=20260519T120000/20260519T130000&ctz=America/Los_Angeles"
-                    target="_blank"
-                    rel="noopener noreferrer"
                 >
                     add to google calendar
                 </a>
-                <a class="calendar-button" href="vote-for-avery.ics?v=2">
+                <a
+                    id="appleCalendarLink"
+                    class="calendar-button"
+                    href="vote-for-avery.ics?v=2"
+                >
                     add to apple calendar
                 </a>
             </div>
@@ -61,6 +63,26 @@
                 document.body.removeChild(tempInput);
             }
         }
+
+        // Prefer iOS Calendar deep-linking so mobile browsers hand off to the Calendar app.
+        (function setupAppleCalendarLink() {
+            const link = document.getElementById("appleCalendarLink");
+            if (!link) return;
+
+            const icsUrl = "https://www.averygranum.com/vote-for-avery.ics?v=2";
+            const webcalUrl = "webcal://www.averygranum.com/vote-for-avery.ics?v=2";
+
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            link.addEventListener(
+                "click",
+                () => {
+                    // If we're on iOS, try opening the Calendar app via webcal://.
+                    // Other platforms fall back to the plain .ics file.
+                    link.href = isIOS ? webcalUrl : icsUrl;
+                },
+                { once: true }
+            );
+        })();
     </script>
 </body>
 </html>
