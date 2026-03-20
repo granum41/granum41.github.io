@@ -1,11 +1,3 @@
-/* 
-    Campfire colors:
-        #FEC09A - light orange
-        #222034 - purple background
-        #3C2F44 - light purple background
-        #C65368 - pink flame
- */
-
 body {
     font-family: Arial, sans-serif;
     color: #FEC09A; 
@@ -17,19 +9,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-ul {
-  list-style-type: none;
-  list-style-position: inside;
-}
-
-a {
-  color: #C65368;
-  background-color: transparent;
-  text-decoration: none;
+    min-height: 100vh;
 }
 
 section {
@@ -38,18 +19,31 @@ section {
     margin-bottom: 20px; /* Add space between sections */
 }
 
+.calendar-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calendar-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #FEC09A;
+    border-radius: 6px;
+    color: #FEC09A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.calendar-button:hover,
+.calendar-button:focus {
+    background-color: #FEC09A;
+    color: #222034;
+}
+
 /* Campfire styling */
 .campfire {
     display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-
-}
-
-button {
-    background-color: #222034;
-    color: #FEC09A;
-    border-radius: 10px;
-    box-shadow: grey;
+    margin: 20px auto 0;
 }

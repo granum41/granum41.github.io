@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//averygranum.com//Vote Avery Granum for Precinct Committeeman 417//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:vote-for-avery-20260519-noon@averygranum.com
+DTSTAMP:20260319T120000Z
+DTSTART;TZID=America/Los_Angeles:20260519T120000
+DTEND;TZID=America/Los_Angeles:20260519T130000
+SUMMARY:Vote Avery Granum for Precinct Committeeman 417
+END:VEVENT
+END:VCALENDAR
