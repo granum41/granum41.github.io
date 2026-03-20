@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>averygranum.com</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
 </head>
 <body>
     <div class="container">
@@ -13,7 +12,24 @@
             <h2>me</h2>
             <p>an outdoorsy software engineer living in beautiful & free north idaho</p>
         </section>
+        <section id="calendar">
+            <h2>Vote Avery Granum for Kootenai County Republican Precinct Committeeman for 417</h2>
+            <div class="calendar-buttons">
+                <a
+                    class="calendar-button"
+                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vote%20Avery%20Granum%20for%20Precinct%20Committeeman%20417&dates=20260519T120000/20260519T130000&ctz=America/Los_Angeles"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    add to google calendar
+                </a>
+                <a class="calendar-button" href="vote-for-avery.ics?v=2">
+                    add to apple calendar
+                </a>
+            </div>
+        </section>
         <section id="links">
+            <h2>links</h2>
             <p><a href="https://www.linkedin.com/in/avery-granum/">linkedin</a></p>
             <p><a href="http://www.averyslist.com/">averyslist</a></p>
             <p><a href="mailto:granum41@gmail.com">granum41@gmail.com</a></p>
@@ -22,19 +38,29 @@
             <h2>$</h2>
             <p>BTC: <label id="btcText">bc1qj3zgdydlkvpnw6dn3ldjsyczpknsyaa7pszn6h</label> <button onclick="copyText('btcText')">Copy</button></p>  
             <p>XMR: <label id="xmrText">44hBeyMsW5zTQKjRmXkU63WsKGDRdRtatiY2qb9Rn4e59k5zF1CJ5QUAsZQdZ55enfTkyHxCDW6ZcFhWK1gwXLLsD4hxEUx</label> <button onclick="copyText('xmrText')">Copy</button></p>  
-            <p>ETH: <label id="ethText">0x14727d7992E510F4FD6437B7f34f768db9F7221A</label> <button onclick="copyText('ethText')">Copy</button></p>  
         </section>
     </div>
     <img src="campfire.gif" alt="Campfire" class="campfire" />
+    <script>
+        async function copyText(elementId) {
+            const source = document.getElementById(elementId);
+            if (!source) return;
 
-
-<script>
-        function copyText(labelId) {
-            /* Select text area by id*/
-            var label = document.getElementById(labelId);
-            var textToCopy = label.textContent || label.innerText;
-            navigator.clipboard.writeText(textToCopy);
+            const text = source.textContent.trim();
+            try {
+                await navigator.clipboard.writeText(text);
+            } catch (error) {
+                const tempInput = document.createElement("textarea");
+                tempInput.value = text;
+                tempInput.setAttribute("readonly", "");
+                tempInput.style.position = "absolute";
+                tempInput.style.left = "-9999px";
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+            }
         }
-</script>
+    </script>
 </body>
 </html>
