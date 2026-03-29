@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #0b1f4b;
+    background: #ffffff;
+}
+
+.hero {
+    color: #002868;
+    text-align: center;
+    padding: 56px 20px 44px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 100%);
+    border-top: 12px solid #bf0a30;
+    border-bottom: 12px solid #002868;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 2px solid #002868;
+    border-radius: 12px;
+    padding: 28px 20px;
+    box-shadow: 0 10px 24px rgba(0, 40, 104, 0.12);
+}
+
+.kicker {
+    margin: 0 0 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4.3vw, 3.4rem);
+    line-height: 1.15;
+}
+
+.tagline {
+    margin: 0 0 24px;
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+}
+
+.content {
+    max-width: 980px;
+    margin: 28px auto 48px;
+    padding: 0 20px;
+}
+
+/* Match top .hero: soft gradient band + red/blue bars; inner content uses .hero-content */
+.vote-banner {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 40px 20px 44px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 100%);
+    border-top: 12px solid #bf0a30;
+    border-bottom: 12px solid #002868;
+    color: #002868;
+}
+
+@media (min-width: 1020px) {
+    .vote-banner {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: max(20px, calc(50vw - 490px));
+        padding-right: max(20px, calc(50vw - 490px));
+    }
+}
+
+.vote-banner .hero-content {
+    margin-bottom: 0;
+}
+
+.vote-banner-label {
+    margin: 0;
+}
+
+.vote-banner-date {
+    margin: 8px 0 6px;
+    font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    line-height: 1.2;
+    color: #002868;
+}
+
+.vote-banner .tagline {
+    font-weight: 600;
+}
+
+.calendar-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.calendar-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 2px solid #002868;
+    color: #002868;
+    text-decoration: none;
+    font-weight: 700;
+    background: #ffffff;
+}
+
+.calendar-button:hover,
+.calendar-button:focus {
+    background: #bf0a30;
+    border-color: #bf0a30;
+    color: #ffffff;
+}
+
+.family {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.family-photo {
+    width: min(100%, 860px);
+    height: auto;
+    border: 6px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(2, 6, 23, 0.25);
+}
+
+.family-caption {
+    margin: 10px auto 0;
+    max-width: 860px;
+    text-align: center;
+    font-size: 0.98rem;
+    color: #002868;
+    font-style: italic;
+}
+
+.message {
+    margin-top: 30px;
+    background: #ffffff;
+    border-left: 6px solid #bf0a30;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.message h2 {
+    margin-top: 0;
+    color: #002868;
+}
+
+.message p {
+    line-height: 1.65;
+}
+
+.faq {
+    margin-top: 30px;
+    background: #ffffff;
+    border-left: 6px solid #002868;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.faq h2 {
+    margin-top: 0;
+    color: #002868;
+}
+
+.faq-item + .faq-item {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 40, 104, 0.18);
+}
+
+.faq-item h3 {
+    margin: 0 0 8px;
+    color: #002868;
+    font-size: 1.04rem;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.6;
+}
